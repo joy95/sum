@@ -1,0 +1,166 @@
+1、回到顶部功能
+   不能使用a标签，因为有默认跳转功能。解决方法有两种：一是使用其他标签；二是利用jquery中的return false；去掉默认属性。
+2、涉及文章类的需要给一个div，并设置padding值，为了美观。
+3、textaerea右下角的三角用resize : none就能够去掉。fitting!
+4、回到顶部功能的jquery
+	$(function(){
+			$("需要点击的对象").click(function () {
+				var speed=200;//滑动的速度
+				$('body,html').animate({ scrollTop: 0 }, speed);
+				return false;
+			});
+		})
+5、出现不了的先找超出隐藏部分，你已经在这里吃很多亏了。。。
+6、背景图固定不动background-attachment:fixed；
+7、实现两条下边框使用box-shadow：0 xpx 0 color;时。宽度要为border-bottom的两倍。
+8、只要你写到  overflow 不是默认值的， 都必须加上这个  -webkit-overflow-scrolling: touch;-webkit-overflow-scrolling: touch; 这个是给ios的滑动用的。 不加这个ios滑动起来会很卡
+9/$('.ul-all').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+10.小程序有删除功能的必须有id
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    slide: "li",//配置轮播标签，默认div
+                });
+10.角标：&.on[data-line]:after
+            content: attr(data-line)
+            width: 120px 
+            height: 30px
+            position: absolute
+            color: #fff 
+            top: 10px
+            left: -30px
+            line-height: 30px
+            background: #ee5b69
+            text-align: center
+            transform: rotate(-45deg)
+            -webkit-transform: rotate(-45deg)
+            -moz-transform: rotate(-45deg)
+            -ms-transform: rotate(-45deg)
+11.弹性盒子多列布局：：：display: flex;
+	                flex-wrap: wrap;
+		设置width
+12.ctrl+KU小写切换大写；ctrl+KL大写切换小写
+13.小程序的button边框只能用button：：after｛border:0｝去掉
+14.小程序上下轮播通过swiper的vertical属性控制，vertical=false为左右轮播；vertical=true为上下轮播~~~
+15.小程序左右滑动通过scroll-view中的scroll-x或者scroll-y控制滑动的方向(tip:使用浮动则不生效;bug:右边有一块空白还未解决)。
+
+
+
+
+16.prop添加w3c给该标签定义的属性（固定属性），attr添加自定义属性。自定义属性prop获取不到。
+17.overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+18、fancybox 插件做图片查看，a的href属性也需要是图片的地址，还有rel属性全部要加上。
+
+19、position:absolute;
+  clip:rect(0px,60px,200px,0px);可以将元素截成各种尺寸，包括0
+
+20、去掉a链接中点击出现的蒙版a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+21、insertAdjacentText方法与 insertAdjacentHTML方法类似，只不过只能插入纯文本，参数相同
+
+    方法名称：insertHtml(where,el,html)/insertAdjacentHTML(where,el,html)
+where： 
+	1.     beforeBegin: 插入到标签开始前
+
+	2.     afterBegin:插入到标签开始标记之后
+
+	3.     beforeEnd:插入到标签结束标记前
+
+	4.     afterEnd:插入到标签结束标记后
+22、底部定位对安卓手机键盘弹出的影响的解决方案
+	var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    	$(window).on('resize', function () {
+        var nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        if (clientHeight > nowClientHeight) {
+            //键盘弹出的事件处理
+            $('.foot').hide();
+            $('.footer').hide()
+        }
+        else {
+            //键盘收起的事件处理
+            $('.foot').show();
+            $('.footer').show()
+        }
+    });
+23、手机键盘弹出对ios来说是改变了scrollTop的值；而安卓则是改变了window.innerHeight.
+24、回到顶部功能
+	 $(".side").click(function()
+        {
+            var speed = 200; //滑动的速度
+            $('body,html').animate(
+            {
+                scrollTop: 0
+            }, speed);
+            return false;
+        });
+
+
+25、ie9包括其本身以下的输入框里面的文字对齐方式是默认顶对齐。
+
+其他的默认是居中，placeholder在没有line-height的情况下是和value一样对齐的。
+26、屏幕显示时操作
+	$(document).ready(function() {
+		var _arr = []
+		$(window).on('scroll', function() {
+			$('.forscroll').each(function(index){
+				var that = $(this);
+				that.index = index;
+				if($(document).scrollTop() + $(window).height()/3 > that.offset().top){
+				_arr.push(index);
+				}
+			}); 
+
+			if(_arr.length){
+				$('.nav li').eq(_arr[_arr.length-1]).addClass('active').siblings().removeClass('active');
+				_arr = [];
+			}
+
+		})
+		点击之后页面滚动到对应的位置
+		$('.nav li').each(function(index){
+			$(this).click(function(){
+				$('html,body').animate({scrollTop: $('.forscroll').eq(index).offset().top - $('.navbar').height() + 'px'}, 500);
+				return false;
+			})
+		});
+ 
+	})
+27、http://www.shejidaren.com/30-examples-with-css3-animation-code-sinppets.html 纯样式的动画效果。
+28、css3动画，将transition:width 2s, height 2s，写在不带hover上，hover之后将动画完成到hover之后的样式。
+
+29、PC端出现弹窗的时候就阻止默认事件 e.prevenDefault()；
+    手机端需要在要禁止滚动的元素上使用touchstart + e.prevenDefault()
+
+30、 $(document).on("change",'select#status',function(){
+       console.log($(this).val());
+     });
+
+31、$(document).on('click' ,'.cancel' ,function(){｝操作后面生成的元素。直接操作元素会不生效。
+
+32、回调函数上面会有延时情况，所以数据可能会没跟上，直接在回调里面更新数据  —— 小程序
+
+33、小程序的图片可以做截取缩放、还能根据宽度的改变高度按照比例的mode的属性
+
+34、position： absolute，未指定left/top/right/bottom的absolute元素，其在所处层级中的定位点就是正常文档流中该元素的定位点。
+	1.1 如果用父relative + 子absolute来实现定位，万一将来页面布局要调整，父元素的尺寸需要变换，定位元素会错位
+		可以改用margin来控制，这样父级元素尺寸怎么改变定位元素的位置不会发生变化。。。
+	1.2 拉伸平铺时，用relative可以有效限制子absolute元素的拉伸平铺范围（注意是拉伸，不是缩小。要缩小请再加上width/height:100%;）使用top、left、right、bottom为0可以覆盖到定位元素的位置。
+	1.3 absolute控制隐藏和显示。方法当然相当简单，如absolute+ top:-9999em，或absolute + visibility:hidden。（用display:none会导致render tree（渲染树）重绘和回流）
+
+35、使用原生js获取第一个子元素，firstchild如果父级与子级中间有空白格将返回空白格；
+				firstElementChild就能够获取到第一个子元素。。
+
+36、限高的块元素里面的行内块元素vertical-align: middle可以实现根据文字行数自动居中。
+
+37、文本换行
+	word-break: break-all; word-wrap:break-word;
+
+38、calc(50% - 10px)可以动态计算距离。
