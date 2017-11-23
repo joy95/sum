@@ -164,3 +164,5 @@ where：
 	word-break: break-all; word-wrap:break-word;
 
 38、calc(50% - 10px)可以动态计算距离。
+39、移动端文字滚动
+	<marquee behavior="scroll">我是单方向文字滚动标签</marquee>
