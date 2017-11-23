@@ -50,3 +50,13 @@
       });
 
     })
+39、jQuery阻止移动端遮罩层后页面滚动
+	.ovfHiden{overflow: hidden;height: 100%;}
+	$(".header_right").click(function(){
+	   $('html,body').addClass('ovfHiden'); //使网页不可滚动
+	   $(".searchbox").show();
+	 })
+	 $(".yg-close").click(function(){
+	   $('html,body').removeClass('ovfHiden'); //使网页恢复可滚
+	   $(".searchbox").hide();
+	 })
