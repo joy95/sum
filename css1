@@ -166,3 +166,12 @@ where：
 38、calc(50% - 10px)可以动态计算距离。
 39、移动端文字滚动
 	<marquee behavior="scroll">我是单方向文字滚动标签</marquee>
+40、自定义滚动条
+	&::-webkit-scrollbar//轨道
+		width: 2px
+		height: 100%
+		background: #000
+	&::-webkit-scrollbar-thumb//滚动块
+		width: 4px
+		background: #f00
+		border-radius: 10px
