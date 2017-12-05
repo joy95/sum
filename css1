@@ -175,3 +175,8 @@ where：
 		width: 4px
 		background: #f00
 		border-radius: 10px
+41、小程序
+	scroll-view实现左右滑动
+	在文档上对css没有进行描述，要想横向滚动，首先要先把子元素设置成一行，发现float不能用
+
+要对子元素进行display:inline-block ,容器进行 white-space: nowrap;
