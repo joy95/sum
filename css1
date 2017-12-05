@@ -181,3 +181,5 @@ where：
 
 要对子元素进行display:inline-block ,容器进行 white-space: nowrap;
 42、小程序下拉加载动画的三个点点的颜色改变，默认是白色，白底的不显示(在json文件中加上"backgroundTextStyle": "dark"）下拉加载的动画在安卓可以很好的体现，ios没有动画，这是2017/12/05
+43、淘宝镜像npm
+http://blog.csdn.net/quuqu/article/details/64121812
