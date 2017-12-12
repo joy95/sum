@@ -60,3 +60,16 @@
 	   $('html,body').removeClass('ovfHiden'); //使网页恢复可滚
 	   $(".searchbox").hide();
 	 })
+40、判断两个对象之间的属性以及属性值有没有相同
+function com(o, p) {
+	var iii = false;
+	for (var key in o) {
+		if (o.hasOwnProperty(key)) {
+			if (p.hasOwnProperty(key)) {
+				if (p[key] === o[key]) {
+					iii = true;
+				}
+			}
+		}
+	}
+}
