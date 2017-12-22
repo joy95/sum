@@ -196,3 +196,7 @@ http://blog.csdn.net/quuqu/article/details/64121812
 	强制英文单词断行
 
 	div{word-break:break-all;}
+ 45、小程序联系客服的实现
+ 	<button open-type="contact" hover-class="touch" hover-stay-time="500">
+		<text class="text">联系客服</text>
+	</button>
