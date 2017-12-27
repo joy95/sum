@@ -79,3 +79,6 @@ function com(o, p) {
 	
 42、使用animate执行动画会重复执行，解决方法是在该执行函数之前加上stop()
 	$('.commonSide').stop().animate({right: '0'},2000)
+
+43、手机端使用rem单位的话需要在头部加上这段js，用设计稿的尺寸除以100
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
