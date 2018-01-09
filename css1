@@ -52,8 +52,14 @@
 17.overflow : hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2;//需要组合其他的WebKit属性才能够实现效果
     -webkit-box-orient: vertical;
+    
+    以上是限制行数之后能出现省略号，不限制行数的写法是：
+    	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;//因为不换行所以只能显示一行，因此也不需要加高度。
+	
 18、fancybox 插件做图片查看，a的href属性也需要是图片的地址，还有rel属性全部要加上。
 
 19、position:absolute;
