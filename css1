@@ -220,3 +220,10 @@ http://blog.csdn.net/quuqu/article/details/64121812
 		-webkit-column-break-inside: avoid
 		break-inside: avoid
 注意: Internet Explorer 9及更早 IE 版本浏览器不支持 column-count 属性。
+
+
+47、为什么在CSS中不设置table{ border-collapse:collapse; } 直接设置tr的边框boder就没效果？
+不管有没有使用border-collapse:collapse;，对tr写入border的样式都会有问题，原因目前还不清楚，可能是td会覆盖tr吧？？？？
+解决还是有办法的，直接把border的样式写在td里面就行。
+
+
