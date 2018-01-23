@@ -234,4 +234,7 @@ http://blog.csdn.net/quuqu/article/details/64121812
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 参考网址：https://www.cnblogs.com/lvdabao/p/background-clip-text.html
-	
+
+
+49、在写移动端时，a标签或者input标签等 在手机上点击背后会有阴影的解决办法
+	a,input{-webkit-tap-highlight-color:rgba(255,0,0,0);} 被背景设置成透明的就行了
