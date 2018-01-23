@@ -226,4 +226,12 @@ http://blog.csdn.net/quuqu/article/details/64121812
 不管有没有使用border-collapse:collapse;，对tr写入border的样式都会有问题，原因目前还不清楚，可能是td会覆盖tr吧？？？？
 解决还是有办法的，直接把border的样式写在td里面就行。
 
-
+48、关于input框在手机端还是会出现默认样式的解决方法
+针对input增加以下样式可以去掉未选中的样式
+	outline: none
+	border: none
+在以上的基础加上以下样式可以去掉选中后的样式
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+参考网址：https://www.cnblogs.com/lvdabao/p/background-clip-text.html
+	
