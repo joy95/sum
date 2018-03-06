@@ -82,4 +82,9 @@ function com(o, p) {
 
 43、手机端使用rem单位的话需要在头部加上这段js，用设计稿的尺寸除以100
 	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	
 44、身份证验证方法，参考链接:http://blog.csdn.net/zjslqshqz/article/details/73571736
+
+45、遮罩层淡出：setTimeout(function(){
+                        $(".commonLayer").fadeOut();
+                    },200);
