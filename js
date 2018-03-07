@@ -96,3 +96,5 @@ function com(o, p) {
         var minDate = new Date(nowDate.setDate(nowDate.getDate()+1));//设置成当前日期的后一天
         var minDate1 = new Date(nowDate.getDate()+1);//将被设置成当前月+1月
         console.log(minDate,minDate1,'hhhh')
+	
+48、$.trim用来删除字符串开始和末尾的空格。。
