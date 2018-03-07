@@ -88,3 +88,4 @@ function com(o, p) {
 45、遮罩层淡出：setTimeout(function(){
                         $(".commonLayer").fadeOut();
                     },200);
+46、关于时间日期的获取方法，参考链接：https://www.cnblogs.com/xiaoshujiang/p/5518462.html
