@@ -89,3 +89,10 @@ function com(o, p) {
                         $(".commonLayer").fadeOut();
                     },200);
 46、关于时间日期的获取方法，参考链接：https://www.cnblogs.com/xiaoshujiang/p/5518462.html
+
+47、var nowDate = new Date();
+        console.log(nowDate,'ooo')
+        var pro_num = $("#pro_num").val();
+        var minDate = new Date(nowDate.setDate(nowDate.getDate()+1));//设置成当前日期的后一天
+        var minDate1 = new Date(nowDate.getDate()+1);//将被设置成当前月+1月
+        console.log(minDate,minDate1,'hhhh')
