@@ -98,3 +98,11 @@ function com(o, p) {
         console.log(minDate,minDate1,'hhhh')
 	
 48、$.trim用来删除字符串开始和末尾的空格。。
+49、jquery创建元素的另外一种方法，很牛逼，多学习了一个
+var nationBtnBox=$("<div />",{class:"nationBtnBox"});
+        var nationChoose=$("<div />",{class:"nationChoose"});
+        var nationTitle=$("<div />",{class:"title"});
+        nationTitle.append("<p>我选择的是：</p>");
+        nationChoose.append(nationTitle);
+        nationChoose.append("<div class='items'/>");
+        nationChoose.append("<a class='c-blue clear-btn'>清空所有</a>");
