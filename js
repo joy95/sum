@@ -106,3 +106,9 @@ var nationBtnBox=$("<div />",{class:"nationBtnBox"});
         nationChoose.append(nationTitle);
         nationChoose.append("<div class='items'/>");
         nationChoose.append("<a class='c-blue clear-btn'>清空所有</a>");
+50、$$("*")适用于开发工具中使用，直接使用是没有用的。。
+
+51、// let setstyle = [].forEach.call($$("*"),function(a){ a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16) })
+    // 解释: 选择所有元素,用数组的forEach方法进行遍历,所有元素都设置一个描边,描边的宽度和类型固定,颜色值随机.随机取得的值乘以2进制的25位值转换
+    的10进制值,然后通过位运算可以将浮点数转换成整数,两次否定使整数部分不变,再将这个值转换成16进制字符串. 
+    这个是没看懂，但是好像很厉害的样子。
