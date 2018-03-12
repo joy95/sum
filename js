@@ -112,6 +112,11 @@ var nationBtnBox=$("<div />",{class:"nationBtnBox"});
     // 解释: 选择所有元素,用数组的forEach方法进行遍历,所有元素都设置一个描边,描边的宽度和类型固定,颜色值随机.随机取得的值乘以2进制的25位值转换
     的10进制值,然后通过位运算可以将浮点数转换成整数,两次否定使整数部分不变,再将这个值转换成16进制字符串. 
     这个是没看懂，但是好像很厉害的样子。
+    
+    前面的[]空数组为用不到的数组，是一种简写，原型应为Array.prototype
+    
+    参考网址：http://blog.csdn.net/qq_26847293/article/details/50833285
+    
 52、事件函数设置
 	function addHandler(element, type, handler) {
             if (element.addEventListener) {
