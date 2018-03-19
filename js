@@ -1,3 +1,7 @@
+
+sublime安装格式化插件是需要依赖node环境
+
+
 4、回到顶部功能的jquery
 	$(function(){
 			$("需要点击的对象").click(function () {
