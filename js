@@ -133,3 +133,5 @@ var nationBtnBox=$("<div />",{class:"nationBtnBox"});
         }
    使用：
    	addHandler(form, 'submit', function(e) {})
+	
+53、生成[m,n]之间的随机数，参考链接：https://www.cnblogs.com/starof/p/4988516.html
