@@ -258,3 +258,17 @@ http://blog.csdn.net/quuqu/article/details/64121812
 16         background-color: #8b8b8b;
 17         border-radius: 10px;
 18     }
+
+
+51、css动画----音乐播放旋转效果
+@-webkit-keyframes rotation{
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);}
+}
+.xuanzhuan{
+	-webkit-transform: rotate(360deg);
+	animation: rotation 3s linear infinite;
+	-moz-animation: rotation 3s linear infinite;
+	-webkit-animation: rotation 3s linear infinite;
+	-o-animation: rotation 3s linear infinite;
+}
