@@ -135,3 +135,25 @@ var nationBtnBox=$("<div />",{class:"nationBtnBox"});
    	addHandler(form, 'submit', function(e) {})
 	
 53、生成[m,n]之间的随机数，参考链接：https://www.cnblogs.com/starof/p/4988516.html
+
+54、延迟加载jq
+ $(function()
+        {
+            $(".headermenu").click(function()
+            {
+                $(".headerdl>dd").slideToggle(250);
+            });
+            $(".headerlist>li").each(function(index)
+            {
+                $(this).css(
+                    {
+                        'animation-delay': (index / 10) + 's'
+                    });
+            });
+            $('.reclassify').click(function()
+            {
+                $(this).toggleClass("on");
+                $(this).find('.reclassifytop').toggleClass("on");
+                $(this).find('.reclassifybox').slideToggle(200);
+            })
+        })
