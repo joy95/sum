@@ -291,4 +291,26 @@ http://blog.csdn.net/quuqu/article/details/64121812
 }
 
 53、爱萌手机端 http://m.iam.ltd/  （头部菜单延迟加载效果）
-	
+	<script>
+        $(function()
+        {
+            $(".headermenu").click(function()
+            {
+                $(".headerdl>dd").slideToggle(250);
+            });
+            $(".headerlist>li").each(function(index)
+            {
+                $(this).css(
+                    {
+                        'animation-delay': (index / 10) + 's'
+                    });
+            });
+            $('.reclassify').click(function()
+            {
+                $(this).toggleClass("on");
+                $(this).find('.reclassifytop').toggleClass("on");
+                $(this).find('.reclassifybox').slideToggle(200);
+            })
+        })
+    </script>
+
